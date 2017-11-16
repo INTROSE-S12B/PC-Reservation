@@ -18,10 +18,10 @@
 		<form action =  "{% url 'blog:hello' %}" method = "POST">
 		
 			{% csrf_token %}
-			<label for="id_PC_Num" > PC Numer: </label>
+			<label for="id_PC_Num" > PC Number: </label>
 			{{ form.PC_Num }}
 			<br>
-			<label for="id_Floor_Num" > Floor Numer: </label>
+			<label for="id_Floor_Num" > Floor Number: </label>
 			{{ form.Floor_Num }}
 			<input type = "submit" value="Submit"/>
 		</form>
