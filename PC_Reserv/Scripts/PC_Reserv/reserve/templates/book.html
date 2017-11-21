@@ -1,25 +1,29 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DLSU PC Reservation</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- =======================================================
-        Theme Name: Mentor
-        Theme URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-        Author: BootstrapMade.com
-        Author URL: https://bootstrapmade.com
-    ======================================================= -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/css.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/imagehover.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+
+
+
+
   </head>
   <body>
+
     <!--Navigation bar-->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -31,76 +35,72 @@
         </button>
         <a class="navbar-brand" href="index.html">DLSU<span>LIBRARIES</span></a>
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#feature">How it works</a></li>
+          <li class="btn-trial"><a href="#footer">Item 1</a></li>
+        </ul>
+        </div>
       </div>
     </nav>
     <!--/ Navigation bar-->
-	
     <!--Modal box-->
     <div class="modal fade" id="login" role="dialog">
       <div class="modal-dialog modal-sm">
-      
+
         <!-- Pop-up box-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title text-center form-title">Booking Details</h4>
           </div>
-		  
           <div class="modal-body padtrbl">
 
             <div class="login-box-body">
-              <p class="login-box-msg">Enter your details to finish your reservation</p>
+              <p class="login-box-msg">Enter your details to finsh you reservation</p>
               <div class="form-group">
                 <form name="" id="loginForm">
-				
-                  <div class="form-group"> <!----- email -------------->
-                      <input class="form-control" placeholder="Email"  id="email" type="text" autocomplete="off" /> 
-            <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginem"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                  </div>
-                    
-				  <div class="form-group"> <!----- IDnumber -------------->
-				<select class="form-control" id="idnum">
-					<option value="" selected disabled hidden>ID number</option>
-					<option value="117">117</option>
-					<option value="116">116</option>
-					<option value="115">115</option>
-					<option value="114">114</option>
-					<option value="113">113</option>
-					<option value="Others">Others</option>
-			  </select>
-			   <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginem"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
-			</div>
-				  
-				  <div class="form-group"> <!----- college -------------->
-				<select class="form-control" id="college">
-					<option value="" selected disabled hidden>College</option>
-					<option value="BAGCED">BAGCED</option>
-					<option value="CCS">CCS</option>
-					<option value="COL">COL</option>
-					<option value="CLA">CLA</option>
-					<option value="COS">COS</option>
-					<option value="GCOE">GCOE</option>
-					<option value="RVRCOB">RVRCOB</option>
-					<option value="SOE">SOE</option>
-					<option value="Others">Others</option>
-			  </select>
-			   <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginem"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
-			</div>
-				  
-				  <div class="form-group"> <!----- Patron -------------->
-				<select class="form-control" id="patron">
-					<option value="Undergraduate">Undergraduate</option>
-					<option value="Graduating">Graduating</option>
-					<option value="Alumni">Alumni</option>
-			  </select>
-			   <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginem"></span><!---Alredy exists  ! -->
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
-			</div>
-            
-              </div>     
+
+
+
+                  <div class="form-group"><!----- DLSU Email -------------->
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email" data-rule="minlen:4"  />
+                    <div class="validation"></div>
+                </div>
+
+                     <div class="form-group"><!----- ID Number -------------->
+                    <input type="text" name="idnum" class="form-control" id="idnum" placeholder="ID number" data-rule="minlen:4"  />
+                    <div class="validation"></div>
+                </div>
+
+                 <!----- College -------------->
+                  <div class="mdropdown">
+                    <select>
+                      <option>BAGCED</option>
+                      <option>CCS</option>
+                      <option>CLA</option>
+                      <option>COS</option>
+                      <option>GCOE</option>
+                      <option>RVRCOB</option>
+                      <option>SOE</option>
+
+                    </select>
+                </div>
+
+                <!----- Student/Staff -------------->
+                  <div class="mdropdown">
+                    <select>
+                      <option>Undergraduate</option>
+                      <option>Graduate</option>
+                      <option>Faculty</option>
+                      <option>Staff</option>
+
+                    </select>
+                </div>
+
+
+
+              </div>
                   <div class="row">
                       <div class="col-xs-12">
                       </div>
@@ -109,7 +109,7 @@
                       </div>
                   </div>
                 </form>
-             </div>
+              </div>
             </div>
           </div>
         </div>
@@ -117,68 +117,353 @@
       </div>
     </div>
     <!--/ Modal box-->
-    <!--Reservation-->
 
-      <!--INSERT CODE HERE-->
-
-    <!--/Reservation-->
-    <!--Contact-->
-    <section id ="contact" class="section-padding">
+    <!--book-->
+     <section id ="contact" class="section-padding">
       <div class="container">
         <div class="row">
           <div class="header-section text-center">
             <h2>Book a PC</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+
             <hr class="bottom-line">
           </div>
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+
+          <form action="{% url 'reserve:book' %}" method="post" role="form" class="contactForm">
+              {% csrf_token %}
               <div class="col-md-6 col-sm-6 col-xs-12 left">
+
+                <p>1. Select the date of reservation<br></p>
+
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Floor" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
+                    <!--<input class="datepicker" type = "date">-->
+                    {{ form.date }}
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Date (Calendar)" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
+
+                <p>2. Select the floor</p>
+
+                <div class="dropdown">
+                    <!--<select>
+                      <option>Henry Sy 7th floor        </option>
+                      <option>Archers Nook </option>
+
+                    </select>-->
+                    {{ form.floor }}
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
+
+
+                <p>3. Select PC</p>
+
+                <div class="dropdown">
+                    <select>
+                      <option val="0">PC #1</option>
+                      <option>PC #2</option>
+                      <option>PC #3</option>
+                      <option>PC #4</option>
+                      <option>PC #5</option>
+                      <option>PC #6</option>
+                      <option>PC #7</option>
+                      <option>PC #8</option>
+
+                    </select>
                 </div>
+
               </div>
-              
-              <div class="col-md-6 col-sm-6 col-xs-12 right">
-                <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Insert calendar here"></textarea>
-                    <div class="validation"></div>
-                </div>
-              </div>
-              
-              <div class="col-xs-12">
-                <div class="container"><!-- Button -->
-                 <a href="#" data-target="#login" data-toggle="modal" class="btn btn-green btn-block btn-flat">Book</a>
-              </div>
+
+
+
+              <!--TABLE-->
+          <div class="col-md-6 col-sm-6 col-xs-12 right">
+
+            <p>4. Choose a time (min: 15 min, max: 60 min)</p>
+            <div id="scrolltable">
+              <table id="cooltab" class="coolTable coolTd" style="height:20px; overflow:auto;">
+                <tr>
+                  <td align="center">
+                    <a>07:30-07:45</a>
+                  </td>
+                <tr>
+                <tr>
+                  <td align="center">
+                    <a>07:45-08:00</a>
+                  </td>
+                <tr>
+                <tr>
+                  <td align="center">
+                    <a>08:00-08:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>08:15-08:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>08:30-08:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>08:45-09:00</a>
+                  </td>
+                </tr>
+                 <tr>
+                  <td align="center">
+                    <a>09:00-09:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>09:15-09:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>09:30-09:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>09:45-10:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>10:00-10:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>10:15-10:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>10:30-10:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>10:45-11:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>11:00-11:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>11:15-11:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>11:30-11:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>11:45-12:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>12:00-12:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>12:15-12:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>12:30-12:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>12:45-13:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>13:00-13:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>13:15-13:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>13:30-13:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>13:45-14:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>14:00-14:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>14:15-14:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>14:30-14:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>14:45-15:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>15:00-15:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>15:15-15:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>15:30-15:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>15:45-16:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>16:00-16:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>16:15-16:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>16:30-16:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>16:45-17:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>17:00-17:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>17:15-17:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>17:30-17:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>17:45-18:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>18:00-18:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>18:15-18:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>18:30-18:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>18:45-19:00</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>19:00-19:15</a>
+                  </td>
+
+                <tr>
+                  <td align="center">
+                    <a>19:15-19:30</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>19:30-19:45</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a>19:45-20:00</a>
+                  </td>
+                </tr>
+
+            </table>
+          </div>
+
+        </div>
+
+
+              <!--/TABLE-->
+
+
+
+
+              <div class="col-md-12">
+                <!-- Button -->
+                 <a href="#" data-target="#login" data-toggle="modal" class="btn btn-green  btn-trial">Book</a>
+
               </div>
           </form>
-          
+
         </div>
       </div>
     </section>
-    <!--/ Contact-->
-    <!--Organisations-->
 
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
+    <script src="{% static 'js/calendar.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
 
     <!--JQuery-->
 
-
+    <script>
+      $("#cooltab tr").click(function() {
+        $(this).toggleClass("coolTablecolor");
+      });
+    </script>
     
   </body>
 </html>

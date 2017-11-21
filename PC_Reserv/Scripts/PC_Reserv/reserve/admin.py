@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Floor,Pc,Reservation
 
-# Register your models here.
+admin.site.register(Floor)
+admin.site.register(Pc)
+

@@ -27,6 +27,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+    padding: 15px 15px 15px;
+    height: 50px;
 }
 .section-padding{
 	padding: 40px 0px;
@@ -117,7 +119,7 @@ Banner
     position: relative;
 }
 .bg-color{
-	background-color: RGBA(12, 11, 11, 0.82);
+	background-color: RGBA(12, 11, 11, 0.75);
 	min-height: 600px;
 }
 .text-dec{
@@ -489,7 +491,7 @@ Price Table
 Contact Us
 ************************************/
 .contact form .form {
-    width: 100%;
+    width: 80%;
     height: auto;
     padding: 15px 15px 12px;
     font-size: 18px;
@@ -500,7 +502,7 @@ Contact Us
 #contact .form-control {
     background: #fafafa;
     border: 1px solid rgba(119, 81, 81, 0.34);
-    width: 100%;
+    width: 80%;
 	margin-bottom: 15px;
     border-radius: 0;
     
@@ -548,9 +550,119 @@ Contact Us
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
 }
+
+
 /***********************************
-Footer
+Dropdown
 ************************************/
+
+
+
+.dropdown select{
+   
+    width: 90%;
+    height: 30px;
+    padding: 2px;
+    font-family:Open Sans, sans-serif;
+    font-size:13px;
+    font-weight:600;
+    line-height: 1;
+    border: 2;
+    border-radius: 0; 
+
+
+}
+
+.dropdown{
+    width: 90%;
+    padding: 3px 0px 15px;
+    }
+
+.mdropdown select{
+   
+    width: 100%;
+    height: 34px;
+    padding: 3px 0px 15px;
+    font-family:Open Sans, sans-serif;
+    font-size:13px;
+    font-weight:600;
+    line-height: 1;
+    border: 2;
+    border-radius: 0; 
+    border: 1px solid rgba(119, 81, 81, 0.34);
+    background: #fafafa;
+
+
+}
+
+.mdropdown{
+
+    width: 100%;
+    padding: 3px 0px 15px;
+    color: #7f7f7f;
+    
+    }
+
+
+
+
+
+
+/***********************************
+table
+************************************/
+
+a {
+    color:white;
+    text-decoration:none;
+    font-size: 15px;
+    text-align: left;
+
+} 
+
+
+table.coolTable{
+    background-color:#5fcf80;
+    width: 100%;
+    height: 10px;
+    padding: 15px 5px 5px
+}
+
+table td.coolTd{
+    height: 20px;
+}
+
+
+table tr.coolTablecolor {
+    background-color:green;
+
+}
+
+
+
+
+table.coolTable td:hover {
+    background-color:green;
+    color:green;
+}
+
+
+#scrolltable { 
+    margin-top: 20px; margin-bottom: 30px; height: 200px; width:60%; overflow: auto; 
+}
+#scrolltable th div { 
+    position: absolute; margin-top: -20px; 
+}
+
+
+.datepicker {
+    width: 80%;
+    font-size: 15px;
+    font-family:Open Sans, sans-serif;
+    border: 1px solid;
+}
+
+
 .footer {
     padding: 60px 0 20px;
     background: #111;
@@ -672,10 +784,13 @@ Footer
 .btn-green, .btn-green:hover{
     background-color: #5fcf80;
     color: #fff;
+
 }
 .footer .form-control:focus{
     box-shadow: none;
 }
+
+
 /***********************************
 ************************************
 Responsive media queries
@@ -778,4 +893,5 @@ Responsive media queries
     .navbar-default .navbar-nav > li > a{
         text-align: center;
     }
+
 }

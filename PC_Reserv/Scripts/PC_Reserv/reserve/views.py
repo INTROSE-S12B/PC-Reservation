@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import PCForm
+from .forms import PCForm, ReservationForm
 from .models import Pc
+from .models import Floor
 
 
 # Create your views here.
@@ -15,8 +16,8 @@ def hello(request):
 
     if pcform.is_valid():
         pc = Pc()
+        pc.floor_num = Floor.objects.get(pk=pcform.cleaned_data["Floor_Num"])
         pc.pc_num = pcform.cleaned_data["PC_Num"]
-        pc.floor_num = pcform.cleaned_data["Floor_Num"]
         pc.save()
         return render(request, 'book.html', {})
 
@@ -28,4 +29,6 @@ def index(request):
 
 
 def book(request):
-    return render(request, 'book.html', {})
+    mychoice = Floor.objects.all().values_list('floor_num', 'floor_name')
+    reservation = ReservationForm(choice=mychoice)
+    return render(request, 'book.html', {'form': reservation})

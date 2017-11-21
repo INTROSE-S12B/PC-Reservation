@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,11 +8,11 @@
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/css.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/imagehover.min.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!-- =======================================================
         Theme Name: Mentor
         Theme URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
@@ -31,7 +32,13 @@
         </button>
         <a class="navbar-brand" href="index.html">DLSU<span>LIBRARIES</span></a>
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#feature">How it works</a></li>
+          <li class="btn-trial"><a href="#footer">Item 1</a></li>
+        </ul>
         </div>
+      </div>
     </nav>
     <!--/ Navigation bar-->
     <!--Modal box-->
@@ -93,7 +100,7 @@
               <div class="intro-para text-center quote">
                 <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
                 <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto<br>Laudantium enim repellat sapiente quos architecto</p>
-                <a id="book" href="book.html" class="btn get-quote">BOOK A PC</a>
+                <a id="book" href="{% url 'reserve:book' %}" class="btn get-quote">BOOK A PC</a>
               </div>
               <a href="#feature" class="mouse-hover"></a>
             </div>
@@ -152,14 +159,13 @@
     <!--Organisations-->
 
     
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
 
-    <!--JQuery-->
-
+    <!--JQuery--
     <script>
 
       $(function() {
@@ -171,6 +177,6 @@
       });
 
     </script>
-    
+    -->
   </body>
 </html>

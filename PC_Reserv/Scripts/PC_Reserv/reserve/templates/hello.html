@@ -15,15 +15,26 @@
     	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	</head>
 	<body>
+        <button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+
+        <p>This is a example</p>
+
+        <p>This is another example</p>
+        <p>HELLO WORLD WOOOOOOO!!</p>
+
+        <div id="msg">Hello</div>
+
 		<form action =  "{% url 'blog:hello' %}" method = "POST">
 		
 			{% csrf_token %}
-			<label for="id_PC_Num" > PC Number: </label>
+			<label for="id_PC_Num" > PC Numer: </label>
 			{{ form.PC_Num }}
 			<br>
-			<label for="id_Floor_Num" > Floor Number: </label>
+			<label for="id_Floor_Num" > Floor Numer: </label>
 			{{ form.Floor_Num }}
 			<input type = "submit" value="Submit"/>
 		</form>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/practice.js' %}"></script>
 	</body>
 </html>
