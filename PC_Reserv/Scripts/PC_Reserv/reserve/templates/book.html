@@ -460,9 +460,24 @@
     <!--JQuery-->
 
     <script>
-      $("#cooltab tr").click(function() {
-        $(this).toggleClass("coolTablecolor");
-      });
+      var zz = 0
+
+      $("#cooltab").on('click','tr',function(e){
+        e.preventDefault();
+        
+        var selected = $(this).hasClass("coolTablecolor");
+
+        if(zz!=10){
+          if(!selected){
+            $(this).addClass("coolTablecolor");
+            zz = parseInt(zz) + parseInt($(this).attr('value'));
+          }
+        }
+          if (selected) {
+            $(this).removeClass("coolTablecolor");
+            zz = parseInt(zz) - parseInt($(this).attr('value'));
+        }
+      }); 
     </script>
     
   </body>
