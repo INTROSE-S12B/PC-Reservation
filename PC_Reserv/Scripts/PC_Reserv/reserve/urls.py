@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^hello', views.hello, name='hello'),
     url(r'^book', views.book, name='book'),
-    url(r'^book/([0-9]{2})', views.book2, name='book2'),
+    url(r'^choice2/([0-9])$', views.choice2, name='book'),
 ]

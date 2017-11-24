@@ -26,7 +26,7 @@ def hello(request):
 
 def book(request):
     mychoice = Floor.objects.all().values_list('floor_num', 'floor_name')
-    mypc = Pc.objects.all().values_list('pc_num', 'pc_num').filter(floor_num=8)
+    mypc = Pc.objects.all().values_list('pc_num', 'pc_num').filter(floor_num=7)
     mypc = list(mypc)
     for l in range(0, len(mypc)):
         mypc[l] = list(mypc[l])
@@ -36,8 +36,17 @@ def book(request):
     return render(request, 'book.html', {'form': reservation})
 
 
-def book2(request, floor):
-    mychoice = Floor.objects.all().values_list('floor_num', 'floor_name')
+def choice2(request, floor):
+    #mychoice = Floor.objects.all().values_list('floor_num', 'floor_name')
+    code = ""
     mypc = Pc.objects.all().values_list('pc_num', 'pc_num').filter(floor_num=int(floor))
-    reservation = ReservationForm(choice=mychoice, choice2=mypc)
-    return render(request, 'book.html', {'form': reservation})
+    mypc = list(mypc)
+    for l in range(0, len(mypc)):
+        mypc[l] = list(mypc[l])
+        mypc[l][1] = "PC #" + str(mypc[l][1])
+        code += "<option value='" + str(mypc[l][0]) + "'>" + str(mypc[l][1]) + "</option>"
+    return HttpResponse(code)
+
+    #reservation = ReservationForm(choice=mychoice, choice2=mypc)
+    #return render(request, 'book.html', {'form': reservation})
+

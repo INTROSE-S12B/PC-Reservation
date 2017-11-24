@@ -128,7 +128,7 @@
             <hr class="bottom-line">
           </div>
 
-          <form action="{% url 'reserve:book' %}" method="post" role="form" class="contactForm">
+          <form action="{% url 'reserve:book' 0 %}" method="post" role="form" class="contactForm">
               {% csrf_token %}
               <div class="col-md-6 col-sm-6 col-xs-12 left">
 
@@ -483,7 +483,15 @@
             zz = parseInt(zz) - parseInt($(this).attr('value'));
         }
 
-      });  
+      });
+
+
+      $('.floor').on("change", function(){
+         $.get("choice2/"+$('.floor').val(),
+            function (data){
+                $('.pc').html(data);
+                })
+            });
     </script>
     
   </body>
