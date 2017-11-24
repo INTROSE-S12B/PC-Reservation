@@ -17,6 +17,7 @@ class ReservationForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         self.choice = kwargs.pop('choice')
+        self.choice2 = kwargs.pop('choice2')
         super(ReservationForm, self).__init__(*args, **kwargs)
         self.fields['floor'] = forms.ChoiceField(choices=self.choice)
-
+        self.fields['pc'] = forms.ChoiceField(choices=self.choice2)

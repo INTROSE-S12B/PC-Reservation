@@ -154,7 +154,7 @@
                 <p>3. Select PC</p>
 
                 <div class="dropdown">
-                    <select>
+                    <!--<select>
                       <option val="0">PC #1</option>
                       <option>PC #2</option>
                       <option>PC #3</option>
@@ -164,7 +164,8 @@
                       <option>PC #7</option>
                       <option>PC #8</option>
 
-                    </select>
+                    </select>-->
+                    {{  form.pc }}
                 </div>
 
               </div>
@@ -177,62 +178,63 @@
             <p>4. Choose a time (min: 15 min, max: 60 min)</p>
             <div id="scrolltable">
               <table id="cooltab" class="coolTable coolTd" style="height:20px; overflow:auto;">
-                <tr>
+                <tr value ="1">
                   <td align="center">
                     <a>07:30-07:45</a>
                   </td>
-                <tr>
-                <tr>
+                </tr>
+                <tr value ="2">
                   <td align="center">
                     <a>07:45-08:00</a>
                   </td>
-                <tr>
-                <tr>
+                </tr>
+                <tr value = "3">
                   <td align="center">
                     <a>08:00-08:15</a>
                   </td>
+                </tr>
 
-                <tr>
+                <tr value = "4">
                   <td align="center">
                     <a>08:15-08:30</a>
                   </td>
                 </tr>
-                <tr>
+                <tr value = "1">
                   <td align="center">
                     <a>08:30-08:45</a>
                   </td>
                 </tr>
-                <tr>
+                <tr value = "2">
                   <td align="center">
                     <a>08:45-09:00</a>
                   </td>
                 </tr>
-                 <tr>
+                 <tr value = "3">
                   <td align="center">
                     <a>09:00-09:15</a>
                   </td>
 
-                <tr>
+                <tr value = "4">
                   <td align="center">
                     <a>09:15-09:30</a>
                   </td>
                 </tr>
-                <tr>
+                <tr value ="1">
                   <td align="center">
                     <a>09:30-09:45</a>
                   </td>
                 </tr>
-                <tr>
+                <tr vqlue ="2">
                   <td align="center">
                     <a>09:45-10:00</a>
                   </td>
                 </tr>
-                <tr>
+                <tr value = "3">
                   <td align="center">
                     <a>10:00-10:15</a>
                   </td>
 
-                <tr>
+                <tr value = "4">
                   <td align="center">
                     <a>10:15-10:30</a>
                   </td>
@@ -462,12 +464,15 @@
     <script>
       var zz = 0
 
+
+
       $("#cooltab").on('click','tr',function(e){
         e.preventDefault();
-        
+
         var selected = $(this).hasClass("coolTablecolor");
 
         if(zz!=10){
+
           if(!selected){
             $(this).addClass("coolTablecolor");
             zz = parseInt(zz) + parseInt($(this).attr('value'));
@@ -477,7 +482,8 @@
             $(this).removeClass("coolTablecolor");
             zz = parseInt(zz) - parseInt($(this).attr('value'));
         }
-      }); 
+
+      });  
     </script>
     
   </body>
