@@ -119,101 +119,81 @@
     <!--/ Modal box-->
 
     <!--book-->
-     <section id ="contact" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Book a PC</h2>
+ <div class="banner">
+  <div class="bg-color"> 
+   <section id ="contact" class="section-padding">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Book a PC</h2>
+          <hr class="bottom-line">
+        </div>
 
-            <hr class="bottom-line">
-          </div>
-
-          <form action="{% url 'reserve:book' 0 %}" method="post" role="form" class="contactForm">
+        <form action="{% url 'reserve:book' 0 %}" method="post" role="form" class="contactForm">
               {% csrf_token %}
-              <div class="col-md-6 col-sm-6 col-xs-12 left">
-
-                <p>1. Select the date of reservation<br></p>
-
-                <div class="form-group">
-                    <!--<input class="datepicker" type = "date">-->
-                    {{ form.date }}
-                </div>
-
-                <p>2. Select the floor</p>
-
-                <div class="dropdown">
-                    <!--<select>
-                      <option>Henry Sy 7th floor        </option>
-                      <option>Archers Nook </option>
-
-                    </select>-->
-                    {{ form.floor }}
-                </div>
-
-
-                <p>3. Select PC</p>
-
-                <div class="dropdown">
-                    <!--<select>
-                      <option val="0">PC #1</option>
-                      <option>PC #2</option>
-                      <option>PC #3</option>
-                      <option>PC #4</option>
-                      <option>PC #5</option>
-                      <option>PC #6</option>
-                      <option>PC #7</option>
-                      <option>PC #8</option>
-
-                    </select>-->
-                    {{  form.pc }}
-                </div>
-
-              </div>
-
-
-
-              <!--TIME TABLE-->
-          <div class="col-md-6 col-sm-6 col-xs-12 right">
-
-            <p>4. Choose a time (min: 15 min, max: 60 min)</p>
-            <div id="scrolltable">
-              
-              <input type="checkbox" /> &nbsp;&nbsp;07:30 - 07:45 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;07:45 - 08:00 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;08:00 - 08:15 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;08:15 - 08:30 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;08:30 - 08:45 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;08:45 - 09:00 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;09:00 - 09:15 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;09:15 - 09:30 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;09:30 - 09:45 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;09:45 - 10:00 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;10:00 - 10:15 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;10:15 - 10:30 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;10:30 - 10:45 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;10:45 - 11:00 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;11:00 - 11:15 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;11:15 - 11:30 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;11:30 - 11:45 <br />
-              <input type="checkbox" /> &nbsp;&nbsp;11:45 - 12:00 <br />
             
-            </div>
+         <div id ="centre">
+          <div id="center">
 
-        </div>
+              <p>1. Select the date of reservation<br></p>
 
-
-              <!--/TIME TABLE-->
-
-              <div class="col-md-12">
-                <!-- Button -->
-                 <a href="#" data-target="#login" data-toggle="modal" class="btn btn-green  btn-trial">Book</a>
-
+              <div class="form-group">
+                  <!--<input class="datepicker" type = "date">-->
+                  {{ form.date }}
               </div>
-          </form>
 
+              <p>2. Select the floor</p>
+
+              <div class="dropdown">
+                  <!--<select>
+                    <option>Henry Sy 7th floor        </option>
+                    <option>Archers Nook </option>
+
+                  </select>-->
+                  {{ form.floor }}
+              </div>
+
+
+              <p>3. Select PC</p>
+
+              <div class="dropdown">
+                    {{  form.pc }}
+              </div>
+
+              <p>4. Choose a time (min: 15 min, max: 60 min)</p>
+              <div id="scrolltable">
+              
+                <input type="checkbox" /> &nbsp;&nbsp;07:30 - 07:45 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;07:45 - 08:00 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;08:00 - 08:15 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;08:15 - 08:30 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;08:30 - 08:45 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;08:45 - 09:00 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;09:00 - 09:15 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;09:15 - 09:30 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;09:30 - 09:45 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;09:45 - 10:00 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;10:00 - 10:15 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;10:15 - 10:30 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;10:30 - 10:45 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;10:45 - 11:00 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;11:00 - 11:15 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;11:15 - 11:30 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;11:30 - 11:45 <br />
+                <input type="checkbox" /> &nbsp;&nbsp;11:45 - 12:00 <br />
+            
+              </div>
+
+              <a href="#" data-target="#login" data-toggle="modal" class="btn btn-green  btn-trial">Book</a>
+
+            </div>
+           </div>
+          </form>
+         </div>
         </div>
-      </div>
-    </section>
+       </section>
+     </div>
+   </div>
 
     <script src="{% static 'js/calendar.js' %}"></script>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
