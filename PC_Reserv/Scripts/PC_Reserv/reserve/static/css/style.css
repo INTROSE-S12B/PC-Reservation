@@ -44,6 +44,28 @@ a{
 a:hover, a:focus{
     color: #5fcf80;
 }
+
+#centre {
+    margin-left:200px 
+    auto;
+    width:100%;
+    min-height: 650px;
+}
+#center {
+    float: center;
+    margin:0 
+    auto;
+    width:80%;
+    padding-left: 20px
+}
+#left{
+    float:left;
+    width:200px;
+}
+#right{
+    float:right;
+    width:200px;
+}
 /***********************************
 Navigation bar
 ************************************/
@@ -121,6 +143,11 @@ Banner
 .bg-color{
 	background-color: RGBA(12, 11, 11, 0.75);
 	min-height: 600px;
+}
+
+.bg-white{
+    background-color: white;
+    
 }
 .text-dec{
 	font-size: 34px;
